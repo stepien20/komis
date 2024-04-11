@@ -36,8 +36,9 @@ label{
     margin: 10px;
 }
 .przyc>*{
-    width: 125px;
-    height: 30px;
+    width: 140px;
+    height: 40px;
+    margin: 10px;
     border: 1px grey solid;
 border-radius: 10px;
 -webkit-box-shadow: 8px 8px 15px -7px rgba(66, 68, 90, 1);
@@ -71,8 +72,8 @@ box-shadow: 8px 8px 37px -14px rgba(66, 68, 90, 1);
 box-shadow: 8px 8px 37px -14px rgba(66, 68, 90, 1);;
 }
 .element>button{
-    width: 40px;
-    height: 30px;
+    width: 50px;
+    height: 40px;
     margin: 10px;
 }
 .element>*{
@@ -101,10 +102,10 @@ footer{
         <legend>Dane samochodu:</legend>
        <label for="marka"> Marka samochodu <select name="marka" id="marka" >
             <option value=""></option>
-           <option value="">hyundai</option>
-           <option value="">mazda</option>
-           <option value="">bmw</option>
-           <option value="">volvo</option>
+           <option value="hyundai">hyundai</option>
+           <option value="mazda">mazda</option>
+           <option value="bmw">bmw</option>
+           <option value="volvo">volvo</option>
        </select>
     </label>
         <label for="model" >Model samochodu <input type="text" placeholder="np. CX 5" id="model"></label>
@@ -161,7 +162,32 @@ footer{
 </body>
 
 <script>
-
+    const tablica=[]
+const dod=document.querySelector(`#dod`)
+dod.addEventListener(`click`,e=>{
+    e.preventDefault()
+    const marka=document.querySelector(`#marka`).value
+    const model=document.querySelector(`#model`).value
+    const rok=document.querySelector(`#rok`).value
+    const kolor=document.querySelector(`#kolor`).value
+    const przeb=document.querySelector(`#przeb`).value
+    const auto={
+        marka: marka,
+        model: model,
+        rok: rok,
+        kolor: kolor,
+        przeb: przeb
+    }
+    tablica.push(auto)
+    const display=document.querySelector(`#display`)
+    display.innerHTML=` <div class="element">
+            <div> 
+                <h3>${auto.marka}</h3>
+                <p>model:${auto.model}, kolor:${auto.kolor}, rok produkcji:${auto.rok}, przebieg:${auto.przeb}</p>
+            </div>
+            <button>usuń</button>
+        </div>`
+})
 </script>
 
 
