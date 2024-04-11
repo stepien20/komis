@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autokomis</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>
+
+            </h1>
+        </header>
+        <main>
+            <form action="">
+                <fieldset>
+                    <legend>
+                        Dane samochodu
+                    </legend>
+                    <label for="marka">
+                        Marka:
+                        <select name="marka" id="marka">
+                            <option value="BMW">BMW</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Hyundai">Hyundai</option>
+                        </select>
+                    </label>
+                    <label for="model">Model samochodu:<input type="text" name="model" id="model" placeholder="np. C5 X"></label>
+                    <label for="rokProdukcji">Rok produkji: <input type="month" name="rokProdukcji" id="rokProdukcji"></label>
+                    <label for="kolor">Kolor:<input type="text" name="kolor" id="kolor"></label>
+                    <label for="przebieg">Przebieg: <input type="text" name="przebieg" id="przebieg"> tys. km</label>
+                </fieldset>
+                <button id="addBtn">Dodaj samochód</button>
+                <button id="findBtn">Szukaj samochodu</button>
+                <button id="displayBtn">Wyświetl wszystkie</button>
+            </form>
+        </main>
+        <section>
+            <ul id="displayList">
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
