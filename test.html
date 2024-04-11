@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>autokomis</title>
+<style>
+header{
+    display: flex;
+    justify-content: center;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+fieldset{
+    width: 100%;
+    display: flex;
+    justify-content: center ;
+    flex-wrap: wrap;
+}
+label{
+    /* width: 30%; */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.container{
+    width: 50%;}
+    body{
+        display: flex;
+    justify-content: center;
+    }
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+    <header><h1><b>Autokomis</b></h1></header>
+<main>
+    <fieldset>
+        <legend>Dane samochodu:</legend>
+       <label for="marka"> Marka samochodu <select name="marka" id="marka" >
+            <option value=""></option>
+           <option value="">hyundai</option>
+           <option value="">mazda</option>
+           <option value="">bmw</option>
+           <option value="">volvo</option>
+       </select>
+    </label>
+        <label for="model" >Model samochodu <input type="text" placeholder="np. CX 5" id="model"></label>
+
+      <label for="rok" > Rok produkcji <input type="month" id="rok"><br></label>
+
+        <label for="kolor" >Kolor <input type="text" id="kolor" placeholder="np. SPRING BLUE"></label>
+
+        <label for="przeb"> Przebieg: <input type="text" id="przeb"> tyś. km<br> </label>
+ </fieldset>
+ <div>
+       <button id="dod">Dodaj samochod</button>
+       <button id="szuk">Szukaj samochodu</button>
+       <button id="wys">Wyswietl wszystkie</button>
+  </div>
+
+
+</main>
+<section>
+    <div id="display">
+        <div ></div>
+    </div>
+</section>
+  
+    <footer>&copy Me</footer>
+    </div>
+</body>
+
+<script>
+
+</script>
+
+
+
+
+
+
+
+</html>
